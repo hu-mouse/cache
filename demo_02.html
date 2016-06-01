@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>hello world</title>
+    <script src="js/react.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/react-dom.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/browser.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div id="demo">
+		
+	</div>
+	<script type="text/babel">
+	var FirstCompontent = React.createClass({
+		render : function(){
+			return (
+				<div>
+					<h1>{this.props.title}</h1>
+					<input type="text" name="" id="" value="" />
+					<input type="button" name="" id="" value={this.props.send} />
+				</div>
+			);
+		}
+	})
+	var obj = {
+		"title" : "helloword",
+		"send"  : "发送"
+	};
+	ReactDOM.render(<FirstCompontent {...obj}/>,document.querySelector("#demo"));
+	</script>
+</body>
+</html>
