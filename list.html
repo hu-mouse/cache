@@ -38,23 +38,29 @@
 	})	
 	var FirstComponent = React.createClass({
 		mixins : [React.addons.LinkedStateMixin],
-		
 		getInitialState : function(){
 			return {
-				msg : this.props.value
+				msg : this.props.value,
+				listArr : this.props.listArr
 			}
 		},
 		render : function(){
 			return (
 				<div>
 					<h1>{this.props.title}</h1>
-					<input type="text" name="" id="" valueLink={this.linkState('msg')}/>
-					<input type="button" name="" id="" value={this.props.send} />
+					<input type="text" name="" id="" valueLink={this.linkState('msg')} ref="text_input"/>
+					<input type="button" name="" id="" value={this.props.send} onClick={this.addItemHandel} />
 					<p>{this.state.msg}</p>
-					<ListComponent listArr = {this.props.listArr} />
-					
+					<ListComponent listArr = {this.state.listArr} />
 				</div>
 			);
+		},
+		addItemHandel : function(){
+			
+			var value = this.refs.text_input.value,
+				oldArr = this.state.listArr;				
+				Array.prototype.push.apply(oldArr,[value]);
+			this.setState({listArr : oldArr})
 		}
 	})
 	//数据结构
