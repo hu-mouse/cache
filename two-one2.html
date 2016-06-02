@@ -4,17 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>hello world</title>
-    <script src="js/react-with-addons.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/react-with-addons.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/react-dom.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/browser.min.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 	<div id="demo">
-		
+		<!--react中双向数据绑定-->
 	</div>
 	<script type="text/babel">
-	var FirstCompontent = React.createClass({
-		minxins : [React.addons.linkedStateMixin],
+	var FirstComponent = React.createClass({
+		mixins : [React.addons.LinkedStateMixin],
 		
 		getInitialState : function(){
 			return {
@@ -39,7 +39,7 @@
 		"value" : "请输入数据"
 	};
 	//渲染数据
-	ReactDOM.render(<FirstCompontent {...obj}/>,document.querySelector("#demo"));
+	ReactDOM.render(<FirstComponent {...obj}/>,document.querySelector("#demo"));
 	</script>
 </body>
 </html>
