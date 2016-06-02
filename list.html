@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>hello world</title>
+    <script src="js/react-with-addons.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/react-dom.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/browser.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div id="demo">
+		
+	</div>
+	<script type="text/babel">
+	var ItemComponent = React.createClass({
+		render : function(){
+			return (
+				<li>
+					{this.props.item}
+				</li>
+			)
+		}
+	})
+	
+	var ListComponent = React.createClass({
+		render : function(){
+			return (
+				<ul>
+					{
+						this.props.listArr.map(function(item,index){
+							return <ItemComponent key = {index} item = {item} />
+						})
+					}
+				</ul>
+			)
+		}
+	})	
+	var FirstComponent = React.createClass({
+		mixins : [React.addons.LinkedStateMixin],
+		
+		getInitialState : function(){
+			return {
+				msg : this.props.value
+			}
+		},
+		render : function(){
+			return (
+				<div>
+					<h1>{this.props.title}</h1>
+					<input type="text" name="" id="" valueLink={this.linkState('msg')}/>
+					<input type="button" name="" id="" value={this.props.send} />
+					<p>{this.state.msg}</p>
+					<ListComponent listArr = {this.props.listArr} />
+					
+				</div>
+			);
+		}
+	})
+	//数据结构
+	var obj = {
+		"title" : "helloword",
+		"send"  : "发送",
+		"value" : "请输入数据",
+		"listArr" : [1,2,3,4,64444]
+	};
+	//渲染数据
+	ReactDOM.render(<FirstComponent {...obj}/>,document.querySelector("#demo"));
+	</script>
+</body>
+</html>
