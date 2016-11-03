@@ -1,6 +1,6 @@
 # key-cache
 
-[中文文档](./README-CN.md)
+[sorry the code has something wrong](./README-CN.md)
 
 Storing data in the form of key into the file
 
