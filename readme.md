@@ -6,14 +6,14 @@ Storing data in the form of key into the file
 
 ---
 
-[![code style fecs](https://img.shields.io/badge/code%20style-fecs-brightgreen.svg)](https://github.com/ecomfe/fecs)
-[![NPM Version](https://img.shields.io/npm/v/key-cache.svg)](https://www.npmjs.com/package/key-cache)
-[![NPM Downloads](https://img.shields.io/npm/dm/key-cache.svg)](https://www.npmjs.com/package/key-cache)
-[![Linux Build](https://img.shields.io/travis/xuexb/key-cache/master.svg?label=linux)](https://travis-ci.org/xuexb/key-cache)
-[![Windows Build](https://img.shields.io/appveyor/ci/xuexb/key-cache/master.svg?label=windows)](https://ci.appveyor.com/project/xuexb/key-cache)
-[![Test Coverage](https://img.shields.io/coveralls/xuexb/key-cache/master.svg)](https://coveralls.io/r/xuexb/key-cache?branch=master)
-[![Dependencies](https://img.shields.io/david/xuexb/key-cache.svg?style=flat)](https://david-dm.org/xuexb/key-cache)
-[![DevDependencies](https://img.shields.io/david/dev/xuexb/key-cache.svg?style=flat)](https://david-dm.org/xuexb/key-cache)
+[![code style fecs](https://img.shields.io/badge/code%20style-fecs-brightgreen.svg)]()
+[![NPM Version](https://img.shields.io/npm/v/key-cache.svg)]()
+[![NPM Downloads](https://img.shields.io/npm/dm/key-cache.svg)]()
+[![Linux Build](https://img.shields.io/travis/xuexb/key-cache/master.svg?label=linux)]()
+[![Windows Build](https://img.shields.io/appveyor/ci/xuexb/key-cache/master.svg?label=windows)]()
+[![Test Coverage](https://img.shields.io/coveralls/xuexb/key-cache/master.svg)]()
+[![Dependencies](https://img.shields.io/david/xuexb/key-cache.svg?style=flat)]()
+[![DevDependencies](https://img.shields.io/david/dev/xuexb/key-cache.svg?style=flat)]()
 
 ## Install
 
@@ -221,31 +221,6 @@ npm run test-cov
 ```
 
 ## Changelog
-
-### 0.2.9
-
-Modify api: `fs.existsSync`=>`fs.statSync`
-
-### 0.2.8
-
-Add nodejs 6.x test environment
-
-### 0.2.7
-
-Update test case to ES6
-
-### 0.2.6
-
-[babel 6.x](https://babeljs.io/) upgrade to compile
-
-### 0.2.3
-
-* Modify `precommit` to `prepush`
-* Add [release.sh](release.sh), refer [vue](https://github.com/vuejs/vue/blob/dev/build/release.sh)
-
-### 0.2.1
-
-Return Value Type Repair `function` when the value is, the change from the `undefined` to `null`~
 
 ### 0.2.0
 
